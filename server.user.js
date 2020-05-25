@@ -3,7 +3,9 @@
 // @namespace all
 // @match *://*/*
 // @author Matthew Streeter
-// @version 0.0.5
+// @version 0.0.6
+// @downloadURL https://github.com/xionous/serverstuff/raw/master/server.user.js
+// @updateURL https://github.com/xionous/serverstuff/raw/master/server.user.js
 // @grant none
 // ==/UserScript==
 
