@@ -31,7 +31,7 @@
     }
 
     document.addEventListener('mouseup', function(e) {
-        var thetext = getSelectionText()
+        var thetext = getSelectionText().trim()
         if (thetext.length > 0 && e.shiftKey) {
             copyText(thetext);
         } else if (thetext.length > 0 && e.ctrlKey && !e.altKey) {
