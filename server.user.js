@@ -3,7 +3,7 @@
 // @namespace all
 // @match *://*/*
 // @author Matthew Streeter
-// @version 0.0.7
+// @version 0.0.8
 // @downloadURL https://github.com/xionous/serverstuff/raw/master/server.user.js
 // @updateURL https://github.com/xionous/serverstuff/raw/master/server.user.js
 // @grant none
@@ -45,4 +45,28 @@
             window.open(the_URL);
         }
     }, false);
+
+    if (window.location.href.indexOf("vSure/activeAlarms") > -1) {
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                var gettd = document.querySelectorAll('td');
+                for (i=0; i < gettd.length; i++) {
+                    if (gettd[i].innerHTML.includes('EM Source: ') && gettd[i].innerHTML.includes('EM Source: <a href') == false) {
+                        var geturl = gettd[i].innerHTML.split('EM Source: ');
+                        var theurl = geturl[1].replace(')', '');
+                        var newIt = gettd[i].innerHTML.replace(theurl, '<a href="http://'+theurl+'" target=”_blank”>'+theurl+'</a>');
+                        gettd[i].innerHTML = newIt;
+                    }
+                }
+            });    
+        });
+        var target = document.body;
+        observer.observe(target, { attributes: true, childList: true, characterData: true });
+      }
 })();
+
+
+
+
+
+
