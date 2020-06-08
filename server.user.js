@@ -3,7 +3,7 @@
 // @namespace all
 // @match *://*/*
 // @author Matthew Streeter
-// @version 0.0.8
+// @version 0.0.9
 // @downloadURL https://github.com/xionous/serverstuff/raw/master/server.user.js
 // @updateURL https://github.com/xionous/serverstuff/raw/master/server.user.js
 // @grant none
@@ -46,7 +46,7 @@
         }
     }, false);
 
-    if (window.location.href.indexOf("vSure/activeAlarms") > -1) {
+    if (window.location.href.indexOf("vSure") > -1) {
         var observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
                 var gettd = document.querySelectorAll('td');
