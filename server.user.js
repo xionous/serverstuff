@@ -3,7 +3,7 @@
 // @namespace all
 // @match *://*/*
 // @author Matthew Streeter
-// @version 0.1.1
+// @version 0.1.2
 // @downloadURL https://github.com/xionous/serverstuff/raw/master/server.user.js
 // @updateURL https://github.com/xionous/serverstuff/raw/master/server.user.js
 // @grant none
@@ -43,7 +43,7 @@
         }
     }, false);
 
-    if (window.location.href.indexOf("vSure") > -1) {
+    if (window.location.href.indexOf("vsure") > -1) {
         var observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
                 var gettd = document.querySelectorAll('td');
@@ -55,7 +55,7 @@
                         gettd[i].innerHTML = newIt;
                     }
                 }
-            });    
+            });
         });
         var target = document.body;
         observer.observe(target, { attributes: true, childList: true, characterData: true });
