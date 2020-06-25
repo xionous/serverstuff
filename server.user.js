@@ -3,7 +3,7 @@
 // @namespace all
 // @match *://*/*
 // @author Matthew Streeter
-// @version 0.1.2
+// @version 0.1.3
 // @downloadURL https://github.com/xionous/serverstuff/raw/master/server.user.js
 // @updateURL https://github.com/xionous/serverstuff/raw/master/server.user.js
 // @grant none
@@ -43,7 +43,7 @@
         }
     }, false);
 
-    if (window.location.href.indexOf("vsure") > -1) {
+    if (window.location.href.indexOf("vsure.nms.shaw.ca") > -1) {
         var observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {
                 var gettd = document.querySelectorAll('td');
