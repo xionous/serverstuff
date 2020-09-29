@@ -3,7 +3,7 @@
 // @namespace all
 // @match *://*/*
 // @author Matthew Streeter
-// @version 0.1.3
+// @version 0.1.4
 // @downloadURL https://github.com/xionous/serverstuff/raw/master/server.user.js
 // @updateURL https://github.com/xionous/serverstuff/raw/master/server.user.js
 // @grant none
@@ -32,9 +32,7 @@
 
     document.addEventListener('mouseup', function(e) {
         var thetext = getSelectionText().trim()
-        if (thetext.length > 0 && e.shiftKey) {
-            copyText(thetext);
-        } else if (thetext.length > 0 && e.altKey && !e.ctrlKey) {
+        if (thetext.length > 0 && e.altKey && !e.ctrlKey) {
             var the_URL = "https://shawprod.service-now.com/nav_to.do?uri=%2Fchange_request_list.do%3Fsysparm_query%3D123TEXTQUERY321%253D" + thetext;
             window.open(the_URL);
         } else if (thetext.length > 0 && e.altKey && e.ctrlKey) {
